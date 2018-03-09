@@ -687,14 +687,14 @@ section.contact .btn-full:focus, section.contact .btn-full:hover {
   }
 }
 
-#mainNav .navbar-nav > li.nav-item > a.nav-link,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+#mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
+#mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
   color: #212529;
 }
 
-#mainNav .navbar-nav > li.nav-item > a.nav-link:hover, #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+#mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover, #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link.active,
+#mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover,
+#mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus.active {
   color: #F29100;
 }
 

@@ -122,12 +122,14 @@
       }
     }
   }
-  .navbar-nav > li.nav-item > a.nav-link,
-  .navbar-nav > li.nav-item > a.nav-link:focus {
-    color: $gray-900;
-    &:hover,
-    &.active {
-      color: $color4;
+  &.navbar-shrink {
+    .navbar-nav > li.nav-item > a.nav-link,
+    .navbar-nav > li.nav-item > a.nav-link:focus {
+      color: $gray-900;
+      &:hover,
+      &.active {
+        color: $color4;
+      }
     }
   }
 }
