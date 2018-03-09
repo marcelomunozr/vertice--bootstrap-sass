@@ -1,0 +1,331 @@
+section{
+  padding: 6rem  0;
+}
+
+section.homi{
+  padding: 0;
+
+  .carousel{
+    min-height: 100vh;
+
+    .carousel-item{
+      height: 100vh;
+      min-height: 100vh;
+    }
+
+    .carousel-caption{
+      bottom: 30%;
+
+      @media (max-width: 767px) {
+        bottom: 10%;
+      }
+
+      h6{
+        font-family: $gotham-bold;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      h2{
+        font-family: $gotham-bold;
+        font-size: 80px;
+        margin-bottom: 20px;
+
+        @media (max-width: 1366px){
+          font-size: 60px;
+        }
+
+        @media (max-width: 767px) {
+          font-size: 32px;
+        }
+      }
+
+      .btn-slide{
+        @include transition-property(background, color);
+        @include transition-timing-function(ease-in-out);
+        @include transition-duration(200ms);
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        border: 1px solid $white;
+        border-radius: 8px;
+        width: 200px;
+        height: 60px;
+        margin: 0 auto;
+        background: transparent;
+        color: $white;
+        font-family: $gotham-extra-light;
+        font-size: 24px;
+
+        &:hover,
+        &:focus{
+          text-decoration: none;
+          background: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .carousel-indicators{
+    li{
+      @include transition-property(background);
+      @include transition-timing-function(ease-in-out);
+      @include transition-duration(200ms);
+      width: 18px;
+      height: 18px;
+      border: 1px solid $white;
+      background: transparent;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      margin-right: 4px;
+      margin-left: 4px;
+      cursor: pointer;
+
+      &.active,
+      &:hover,
+      &:focus{
+        background: $white;
+      }
+    }
+  }
+
+  .carousel-control-next, .carousel-control-prev{
+    @include transition-property(background);
+    @include transition-timing-function(ease-in-out);
+    @include transition-duration(200ms);
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    opacity: 1;
+    width: 100px;
+    height: 100px;
+    top: 45%;
+    background: rgba($white, 0.2);
+    border-radius: 100%;
+
+    &:hover{
+      background: rgba($white, .6);
+    }
+
+    @media (max-width: 767px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .carousel-control-next{
+    right: 20px;
+
+    img{
+      margin-left: 10px;
+    }
+  }
+
+  .carousel-control-prev{
+    left: 20px;
+
+    img{
+      margin-right: 10px;
+    }
+  }
+}
+
+section.about{
+  min-height: 100vh;
+  background: url('../img/bg-challa.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  .img-center{
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+  }
+}
+
+section.services{
+  background: $color3;;
+
+  .service-box{
+    padding: 50px 16px 32px;
+    background: $white;
+    margin-top: 60px;
+  }
+
+  figure{
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 30px;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  h3{
+    color: $color1;
+    font-family: $gotham-bold;
+    font-size: 24px;
+  }
+
+  p{
+    color: $color2;
+    font-family: $coco-ultra-light;
+    margin-bottom: 28px;
+  }
+
+  .btn-vertisex{
+    @include transition-property(background, color);
+    @include transition-timing-function(ease-in-out);
+    @include transition-duration(200ms);
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    border: 1px solid $color4;
+    border-radius: 8px;
+    width: 180px;
+    height: 46px;
+    margin: 0 auto;
+    background: transparent;
+    color: $color4;
+    font-family: $gotham-extra-light;
+    font-size: 18px;
+    padding-top: 4px;
+
+    &:hover,
+    &:focus{
+      text-decoration: none;
+      background: $color4;
+      color: $white;
+    }
+  }
+}
+
+section.partners{
+  min-height: 100vh;
+
+  .partners-container{
+    margin-top: 50px;
+  }
+
+  .link-img{
+    @include transition-property(opacity);
+    @include transition-timing-function(ease-in-out);
+    @include transition-duration(200ms);
+    opacity: .6;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
+section.contact{
+  position: relative;
+
+  &:before{
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: $color3;
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+  .content-contact{
+    margin-top: 50px;
+  }
+
+  .input-vertisex{
+    border: none;
+    border-bottom: 1px solid $color2;
+    font-family: $coco-ultra-light;
+    width: 100%;
+    padding: 14px 10px;
+    margin-bottom: 16px;
+
+    &:focus{
+      box-shadow: none;
+      outline: 0;
+      border-color: $black;
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    color:  $color2;
+    font-family: $coco-ultra-light;
+  }
+
+  ::-moz-placeholder {
+    color:  $color2;
+    font-family: $coco-ultra-light;
+  }
+
+  :-ms-input-placeholder {
+    color:  $color2;
+    font-family: $coco-ultra-light;
+  }
+
+  :-moz-placeholder {
+    color:  $color2;
+    font-family: $coco-ultra-light;
+  }
+
+  .textarea-vertisex{
+    @include transition-property(max-height);
+    @include transition-timing-function(ease-in-out);
+    @include transition-duration(200ms);
+    border: none;
+    border-bottom: 1px solid $color2;
+    font-family: $coco-ultra-light;
+    width: 100%;
+    padding: 14px 10px;
+    margin-bottom: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    resize: none;
+    height: 120px;
+    max-height: 53px;
+
+    &:focus{
+      max-height: 120px;
+      box-shadow: none;
+      outline: 0;
+      border-color: $black;
+    }
+  }
+
+  .btn-full{
+    @include transition-property(opacity);
+    @include transition-timing-function(ease-in-out);
+    @include transition-duration(200ms);
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    width: 100%;
+    height: 60px;
+    background: $color4;
+    color: $white;
+    font-family: $nexa-bold;
+    font-size: 18px;
+    opacity: 1;
+    cursor: pointer;
+    border: none;
+
+    &:focus,
+    &:hover{
+      opacity: .7;
+      box-shadow: none;
+      outline: 0;
+      border-color: $black;
+      border: none;
+    }
+  }
+}
