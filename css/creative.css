@@ -157,20 +157,71 @@ img::-moz-selection {
 }
 
 section {
-  padding: 6rem  0;
+  padding: 5rem 0;
 }
 
 section.homi {
   padding: 0;
 }
 
+@media (max-width: 767px) {
+  section.homi {
+    position: relative;
+    margin-top: 86px;
+  }
+}
+
 section.homi .carousel {
   min-height: 100vh;
+  border-color: transparent;
+}
+
+@media (max-width: 767px) {
+  section.homi .carousel {
+    height: auto;
+    min-height: initial;
+  }
 }
 
 section.homi .carousel .carousel-item {
   height: 100vh;
   min-height: 100vh;
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  section.homi .carousel .carousel-item {
+    background: none !important;
+    height: auto;
+    min-height: initial;
+  }
+}
+
+section.homi .carousel .carousel-item:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+section.homi .carousel .carousel-item figure {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 0;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  section.homi .carousel .carousel-item figure {
+    display: block;
+  }
+}
+
+section.homi .carousel .carousel-item figure img {
+  width: 100%;
 }
 
 section.homi .carousel .carousel-caption {
@@ -179,7 +230,7 @@ section.homi .carousel .carousel-caption {
 
 @media (max-width: 767px) {
   section.homi .carousel .carousel-caption {
-    bottom: 10%;
+    bottom: 14%;
   }
 }
 
@@ -188,6 +239,12 @@ section.homi .carousel .carousel-caption h6 {
   text-transform: uppercase;
   font-size: 20px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  section.homi .carousel .carousel-caption h6 {
+    font-size: 14px;
+  }
 }
 
 section.homi .carousel .carousel-caption h2 {
@@ -204,7 +261,7 @@ section.homi .carousel .carousel-caption h2 {
 
 @media (max-width: 767px) {
   section.homi .carousel .carousel-caption h2 {
-    font-size: 32px;
+    font-size: 18px;
   }
 }
 
@@ -244,6 +301,20 @@ section.homi .carousel .carousel-caption .btn-slide:hover, section.homi .carouse
   text-decoration: none;
   background: #000;
   color: #fff;
+}
+
+@media (max-width: 767px) {
+  section.homi .carousel .carousel-caption .btn-slide {
+    width: 170px;
+    height: 46px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  section.homi .carousel-indicators {
+    margin-bottom: 0;
+  }
 }
 
 section.homi .carousel-indicators li {
@@ -304,8 +375,8 @@ section.homi .carousel-control-next:hover, section.homi .carousel-control-prev:h
 
 @media (max-width: 767px) {
   section.homi .carousel-control-next, section.homi .carousel-control-prev {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -317,6 +388,19 @@ section.homi .carousel-control-next img {
   margin-left: 10px;
 }
 
+@media (max-width: 767px) {
+  section.homi .carousel-control-next img {
+    margin-left: 5px;
+    width: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  section.homi .carousel-control-next {
+    right: 10px;
+  }
+}
+
 section.homi .carousel-control-prev {
   left: 20px;
 }
@@ -325,13 +409,35 @@ section.homi .carousel-control-prev img {
   margin-right: 10px;
 }
 
+@media (max-width: 767px) {
+  section.homi .carousel-control-prev img {
+    margin-right: 5px;
+    width: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  section.homi .carousel-control-prev {
+    left: 10px;
+  }
+}
+
 section.about {
   min-height: 100vh;
+  max-height: 100vh;
   background: url("../img/bg-challa.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+@media (max-width: 767px) {
+  section.about {
+    background: url("../img/bg-challa.jpg") no-repeat;
+    background-size: 100% 100%;
+    min-height: initial;
+  }
 }
 
 section.about .img-center {
@@ -435,7 +541,9 @@ section.partners .link-img:hover {
 }
 
 section.contact {
+  min-height: 100vh;
   position: relative;
+  padding: 5rem 0 8rem;
 }
 
 section.contact:before {

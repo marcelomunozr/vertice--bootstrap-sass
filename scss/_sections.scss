@@ -1,23 +1,66 @@
 section{
-  padding: 6rem  0;
+  padding: 5rem 0;
 }
 
 section.homi{
   padding: 0;
 
+  @media (max-width: 767px) {
+    position: relative;
+    margin-top: 86px;
+  }
+
   .carousel{
     min-height: 100vh;
+    border-color: transparent;
+
+    @media (max-width: 767px) {
+      height: auto;
+      min-height: initial;
+    }
 
     .carousel-item{
       height: 100vh;
       min-height: 100vh;
+      border: 0;
+
+      @media (max-width: 767px) {
+        background: none!important;
+        height: auto;
+        min-height: initial;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba($black, .4);
+        z-index: 2;
+      }
+
+      figure{
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        margin-bottom: 0;
+        display: none;
+
+        @media (max-width: 767px) {
+          display: block;
+        }
+
+        img{
+          width: 100%;
+        }
+      }
     }
 
     .carousel-caption{
       bottom: 30%;
 
       @media (max-width: 767px) {
-        bottom: 10%;
+        bottom: 14%;
       }
 
       h6{
@@ -25,6 +68,10 @@ section.homi{
         text-transform: uppercase;
         font-size: 20px;
         margin-bottom: 20px;
+
+        @media (max-width: 767px) {
+          font-size: 14px;
+        }
       }
 
       h2{
@@ -37,7 +84,7 @@ section.homi{
         }
 
         @media (max-width: 767px) {
-          font-size: 32px;
+          font-size: 18px;
         }
       }
 
@@ -64,11 +111,21 @@ section.homi{
           background: $black;
           color: $white;
         }
+
+        @media (max-width: 767px) {
+          width: 170px;
+          height: 46px;
+          font-size: 18px;
+        }
       }
     }
   }
 
   .carousel-indicators{
+    @media (max-width: 767px) {
+      margin-bottom: 0;
+    }
+
     li{
       @include transition-property(background);
       @include transition-timing-function(ease-in-out);
@@ -111,8 +168,8 @@ section.homi{
     }
 
     @media (max-width: 767px) {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
     }
   }
 
@@ -121,6 +178,15 @@ section.homi{
 
     img{
       margin-left: 10px;
+
+      @media (max-width: 767px){
+        margin-left: 5px;
+        width: 12px;
+      }
+    }
+
+    @media (max-width: 767px){
+      right: 10px;
     }
   }
 
@@ -129,18 +195,34 @@ section.homi{
 
     img{
       margin-right: 10px;
+
+      @media (max-width: 767px){
+        margin-right: 5px;
+        width: 12px;
+      }
+    }
+
+    @media (max-width: 767px){
+      left: 10px;
     }
   }
 }
 
 section.about{
   min-height: 100vh;
+  max-height: 100vh;
   background: url('../img/bg-challa.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
+
+  @media (max-width: 767px) {
+    background: url('../img/bg-challa.jpg') no-repeat;
+    background-size: 100% 100%;
+    min-height: initial;
+  }
+
   .img-center{
     max-width: 100%;
     margin: 0 auto;
@@ -150,7 +232,7 @@ section.about{
 }
 
 section.services{
-  background: $color3;;
+  background: $color3;
 
   .service-box{
     padding: 50px 16px 32px;
@@ -227,7 +309,9 @@ section.partners{
 }
 
 section.contact{
+  min-height: 100vh;
   position: relative;
+  padding: 5rem 0 8rem;
 
   &:before{
     content: '';
